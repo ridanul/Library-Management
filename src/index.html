@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <title>Dashboard</title>
+</head>
+<body>
+    <!-- Background -->
+    <div class="w-screen h-screen bg-gray-600">
+        <!-- Header and body -->
+         <div class=" pt-5 w-screen h-[40px] flex justify-between px-3">
+            <div class="flex gap-7">
+                <h1 class="text-xl font-bold">LOGO</h1>
+                <img class="w-6 h-6" src="../icons/menu.png" alt="menu"/>
+                <h1>Dashboard</h1>
+            </div>
+            <input type="text" placeholder="search" class="text-gray-600 bg-white w-100 rounded-lg p-2 h-6">
+            <div class="flex gap-10">
+                <img class="w-6 h-6" src="../icons/notification.png" alt="notification"/>
+                <div class="flex gap-5 items-center">
+                    <div>
+                        <h1>Md Ridanul Islam</h1>
+                        <p>Librarian</p>
+                    </div>
+                    <img class="h-13 w-13 rounded-full mr-10"src="../icons/ridanul.jpg" alt="ridanul">    
+                </div>
+            </div>
+         </div>
+         <!-- Body -->
+         <div class="flex">
+            <!-- navbar -->
+            <div class="h-full w-[40px] flex flex-col gap-15 py-10">
+                <div class="flex flex-col gap-4 items-center pl-3">
+                    <img src="../icons/dashboard-5481.png" alt="">
+                    <img src="../icons/return.png" alt="">
+                    <img src="../icons/book.png" alt="">
+                    <img src="../icons/people.png" alt="">
+                    <img src="../icons/settings.png" alt="">
+                    <img src="../icons/faq.png" alt="">
+                </div>
+                <img class="items-center pl-3" src="../icons/exit.png" alt="">
+            </div>
+            <!-- main body -->
+            <div class="bg-black ml-6 mt-6 pl-4 pt-4 w-screen h-screen rounded-xl text-white pr-10">
+                <!-- Greetings section -->
+                <div class="w-full flex justify-between items-center">
+                    <div>
+                        <div class="text-2xl">Hello, <span>Ridanul</span></div>
+                        <div class="text-lg">August 26, 2025 | Tuesday 11:00 AM</div>
+                    </div>
+                    <div class="text-gray-600 bg-white w-50 rounded-lg  h-6 flex items-cetner justify-center" >
+                        <select name="" id="">
+                            <option value="">This Week</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- counter section -->
+                 <div class="h-[80px] flex gap-10 justify-center rounded-lg mt-8 p-1">
+                    <div class="flex gap-30  bg-gray-400 p-2 rounded-xl">
+                        <div class="flex flex-col justify-between">
+                            <h1 class="text-xl">1223</h1>
+                            <p>Total visitor</p>
+                        </div>
+                        <img class="h-[35px] bg-red-500 rounded-full p-1" src="../icons/people.png" alt="people"/>
+                    </div>
+                    <div class="flex gap-30 bg-gray-400 p-2 rounded-xl">
+                        <div class="flex flex-col justify-between">
+                            <h1 class="text-xl">740</h1>
+                            <p>Borrowed Books</p>
+                        </div>
+                        <img class="h-[35px] bg-red-500 rounded-full p-1" src="../icons/files.png" alt="people"/>
+                    </div>
+                    <div class="flex gap-30  bg-gray-400 p-2 rounded-xl">
+                        <div class="flex flex-col justify-between">
+                            <h1 class="text-xl">22</h1>
+                            <p>Overdue Books</p>
+                        </div>
+                        <img class="h-[35px] bg-red-500 rounded-full p-1" src="../icons/retro.png" alt="people"/>
+                    </div>
+                    <div class="flex gap-30  bg-gray-400 p-2 rounded-xl">
+                        <div class="flex flex-col justify-between">
+                            <h1 class="text-xl">60</h1>
+                            <p>New Members</p>
+                        </div>
+                        <img class="h-[35px] bg-red-500 rounded-full p-1" src="../icons/add_people.png" alt="people"/>
+                    </div>
+                </div>
+                <!-- counter end -->
+
+
+
+            </div>
+
+
+
+         </div>
+    </div>
+</body>
+</html>
