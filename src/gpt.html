@@ -226,63 +226,25 @@
   </main>
 
   <!-- JS -->
- <!-- <script>
-    const btn = document.getElementById('menu-btn');
-    const sidebar = document.getElementById('sidebar');
-    const overlay = document.getElementById('overlay');
-
-    function openSidebar() {
-      sidebar.classList.remove('-translate-x-full');
-      sidebar.classList.add('w-[200px]');
-      document.querySelectorAll('#sidebar .label').forEach(el => el.classList.remove('hidden'));
-    <!--  overlay.classList.remove('hidden');
-      btn.setAttribute('aria-expanded', 'true'); -->
-      sidebar.setAttribute('aria-hidden', 'false');
-      // Move focus for accessibility
-      sidebar.focus();
-    }
-
-    function closeSidebar() {
-      sidebar.classList.add('-translate-x-full');
-      sidebar.classList.remove('w-[200px]');
-      document.querySelectorAll('#sidebar .label').forEach(el => el.classList.add('hidden'));
-  <!--    overlay.classList.add('hidden'); -->
-      btn.setAttribute('aria-expanded', 'false');
-      sidebar.setAttribute('aria-hidden', 'true');
-    }
-
-    btn.addEventListener('click', () => {
-      const isHidden = sidebar.classList.contains('-translate-x-full');
-      if (isHidden) openSidebar(); else closeSidebar();
-    });
-
- <!--   overlay.addEventListener('click', closeSidebar); -->
-
-    // Close with Escape key
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeSidebar();
-    });
-
-    // Optional: close when clicking any menu item
-    document.querySelectorAll('#sidebar a, #logout-btn').forEach(el => {
-      el.addEventListener('click', closeSidebar);
-    });
-  </script> -->
 <script>
   const btn = document.getElementById("menu-btn");
   const sidebar = document.getElementById("sidebar");
 
-  btn.addEventListener("click", () => {
-    // Toggle the sidebar visibility
+  // Toggle sidebar on button click
+  btn.addEventListener("click", (e) => {
+    e.stopPropagation(); // prevent immediate closing
     sidebar.classList.toggle("-translate-x-full");
     sidebar.classList.toggle("w-[200px]");
     document.querySelectorAll("#sidebar .label").forEach((el) => {
       el.classList.toggle("hidden");
     });
   });
-      if (
-      !sidebar.contains(e.target) && 
-      !btn.contains(e.target) && 
+
+  // Close sidebar when clicking outside
+  document.addEventListener("click", (e) => {
+    if (
+      !sidebar.contains(e.target) &&
+      !btn.contains(e.target) &&
       !sidebar.classList.contains("-translate-x-full")
     ) {
       sidebar.classList.add("-translate-x-full");
@@ -292,6 +254,18 @@
       });
     }
   });
+
+  // Close with Escape key
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && !sidebar.classList.contains("-translate-x-full")) {
+      sidebar.classList.add("-translate-x-full");
+      sidebar.classList.remove("w-[200px]");
+      document.querySelectorAll("#sidebar .label").forEach((el) => {
+        el.classList.add("hidden");
+      });
+    }
+  });
 </script>
+
 </body>
 </html>
