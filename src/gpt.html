@@ -226,7 +226,7 @@
   </main>
 
   <!-- JS -->
-  <script>
+ <!-- <script>
     const btn = document.getElementById('menu-btn');
     const sidebar = document.getElementById('sidebar');
     const overlay = document.getElementById('overlay');
@@ -267,6 +267,19 @@
     document.querySelectorAll('#sidebar a, #logout-btn').forEach(el => {
       el.addEventListener('click', closeSidebar);
     });
-  </script>
+  </script> -->
+<script>
+  const btn = document.getElementById("menu-btn");
+  const sidebar = document.getElementById("sidebar");
+
+  btn.addEventListener("click", () => {
+    // Toggle the sidebar visibility
+    sidebar.classList.toggle("-translate-x-full");
+    sidebar.classList.toggle("w-[200px]");
+    document.querySelectorAll("#sidebar .label").forEach((el) => {
+      el.classList.toggle("hidden");
+    });
+  });
+</script>
 </body>
 </html>
