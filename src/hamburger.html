@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="./output.css">
+
+<nav class="flex items-center justify-between p-4 bg-gray-800 text-white relative">
+  <h1 class="text-xl font-bold">Logo</h1>
+  
+  <!-- Hamburger button -->
+  <button id="menu-btn" class="md:hidden text-2xl">
+    ☰
+  </button>
+
+  <!-- Menu -->
+  <ul id="menu" class="hidden flex-col space-y-4 bg-gray-700 p-4 absolute top-16 left-0 w-full transition-all duration-300 md:flex md:static md:flex-row md:space-y-0 md:space-x-6">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+
+<script>
+  const btn = document.getElementById("menu-btn");
+  const menu = document.getElementById("menu");
+
+  btn.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+  });
+</script>

@@ -14,7 +14,9 @@
          <div class=" pt-5 w-screen h-[40px] flex justify-between px-3">
             <div class="flex gap-7">
                 <h1 class="text-xl font-bold">LOGO</h1>
-                <img class="w-6 h-6" src="../icons/menu.png" alt="menu"/>
+                <button id="menu-btn">
+                    <img class="w-6 h-6 cursor-pointer" src="../icons/menu.png" alt="menu"/>
+                </button>
                 <h1>Dashboard</h1>
             </div>
             <input type="text" placeholder="search" class="text-gray-600 bg-white w-100 rounded-lg p-2 h-6">
@@ -32,7 +34,7 @@
          <!-- Body -->
          <div class="flex">
             <!-- navbar -->
-            <div class="w-[40px] flex flex-col gap-15 py-10">
+            <div id="sidebar" class="w-[40px] flex flex-col gap-15 py-10 transition-all duration-300">
                 <div class="flex flex-col gap-4 items-center pl-3">
                     <img src="../icons/dashboard-5481.png" alt="">
                     <img src="../icons/return.png" alt="">
@@ -173,5 +175,15 @@
             </div>
         </div>
     </div>
+    <script>
+  const btn = document.getElementById("menu-btn");
+  const sidebar = document.getElementById("sidebar");
+
+  btn.addEventListener("click", () => {
+    // Hide/Show the sidebar by toggling a utility class
+    sidebar.classList.toggle("hidden");
+  });
+</script>
+
 </body>
 </html>
