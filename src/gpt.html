@@ -36,8 +36,8 @@
     </div>
   </header>
 
-  <!-- Overlay (click to close) -->
-  <div id="overlay" class="fixed inset-0 bg-black/40 hidden z-40"></div>
+  <!-- Overlay (click to close)
+  <div id="overlay" class="fixed inset-0 bg-black/40 hidden z-40"></div> -->
 
   <!-- Sidebar (overlay, collapsed by default) -->
   <aside id="sidebar"
@@ -235,8 +235,8 @@
       sidebar.classList.remove('-translate-x-full');
       sidebar.classList.add('w-[200px]');
       document.querySelectorAll('#sidebar .label').forEach(el => el.classList.remove('hidden'));
-      overlay.classList.remove('hidden');
-      btn.setAttribute('aria-expanded', 'true');
+    <!--  overlay.classList.remove('hidden');
+      btn.setAttribute('aria-expanded', 'true'); -->
       sidebar.setAttribute('aria-hidden', 'false');
       // Move focus for accessibility
       sidebar.focus();
@@ -246,7 +246,7 @@
       sidebar.classList.add('-translate-x-full');
       sidebar.classList.remove('w-[200px]');
       document.querySelectorAll('#sidebar .label').forEach(el => el.classList.add('hidden'));
-      overlay.classList.add('hidden');
+  <!--    overlay.classList.add('hidden'); -->
       btn.setAttribute('aria-expanded', 'false');
       sidebar.setAttribute('aria-hidden', 'true');
     }
@@ -256,7 +256,7 @@
       if (isHidden) openSidebar(); else closeSidebar();
     });
 
-    overlay.addEventListener('click', closeSidebar);
+ <!--   overlay.addEventListener('click', closeSidebar); -->
 
     // Close with Escape key
     document.addEventListener('keydown', (e) => {
